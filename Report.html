@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script type="text/javascript" src="path-to-MathJax/MathJax.js">
+</script>
+</head>
+<body>
+<h1 id="capstone-project-understand-neural-network-from-scratch">Capstone project -- Understand Neural Network from scratch</h1>
+<p>Author: Jiyao Li<br>Date: January 24th, 2017<br>Email: jiyao.lee@gmail.com</p>
+<h2 id="introduction">Introduction</h2>
+<p>Neural Network (NN) is an import branch of Artificial Intelligence and Machine Learning. NN has capability of building and training a model to identify different complicated classes, which is not achievable with conventional linear/nonlinear classifiers, such as Softmax regression, SVM, etc. In addition, we all know that NN is a super hot topic nowadays.  </p>
+<p>So I decided to study and explore Neural Network as my capstone project. However, after I tried several open-source NN packages, such as Caffe, Tensorflow, although they works quite well and fast, I still could not really understand how NN works, since these packages are all like a &quot;black box&quot; to me. Then, I started writing NN code from scratch and used several dataset to test my code. Based on the testing results, I think my code works. And through this process, I developed a much better understanding of the structure of NN and its features. </p>
+<p>I found several really good sources online to learn how to develop NN from scratch. The one I like the most is the class note of Stanford class CS231n, <a href="http://cs231n.github.io/">Convolutional Neural Networks for Visual Recognition</a>. This class teaches you how to build the basic architecture of a simple NN and then expand it to more and more complex structures like multi-layer NN and Convolutional Neural Network. Another good source is the <a href="http://ufldl.stanford.edu/tutorial/">Deep Learning Tutorial</a> contributed by Andrew Ng and others. Actually, several major parts of my capstone project is based on the homework assignment 2 of the CS231n class. </p>
+<h2 id="problem-description">Problem description</h2>
+<h3 id="method-and-metrics">Method and Metrics</h3>
+<p>Just like other classification problems in supervised learning, we are provided with labeled dataset to train a model. Out best-trained model should be able to predict the labels of dataset as close to the true labels as possible.</p>
+<p>The Metrics used to judge the quality of the prediction is accuracy, which is the ratio of the number of the correctly predicted labels to the total number of labels. The most solid way to train a model is to first split the whole dataset into three subsets, training data, cross-validation data and testing data. A typical ratio of the split could be 60%-20%-20%. Model will be initially trained on the training set, then on the validation set to tune the hyper-parameters in the model. Finally the performance of the model will be tested on the testing set. </p>
+<p>The ultimate goal of this project is to fully understand the structure of the Convolutional Neural Network, and build a Convolutional Neural Net to train with real-world dataset, <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a>. After training, testing different components and parameters of the CNN on small-scale dataset, two complex Conv Net were trained with the full training set and form an ensemble model to predict on the validation set and testing set. (Yes, I should tune the hyper-parameters even more based on the validation score. However, it takes too long to train the Conv Net using CPU, which was built from scratch using python without optimized speed performance.) Finally, the accuracy on the training set reaches ~97% and over 80% on the validation set and testing set. Although this score is not as good as some of the <a href="http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html">best scores</a> achieved on CIFAR-10 so far, my score beats scores of several early-published models as well as a <a href="https://github.com/udacity/machine-learning/blob/master/projects/capstone/report-example-2.pdf">Udacity MLND template project</a> doing similar work training CNN model on CIFAR-10 dataset. The Udacity template project achieved 70% accuracy and used TensorFlow package, which is not comparable to the work I did from scratch.</p>
+<p>Before getting to the complex Convolutional Neural Network, to fully understand CNN (and Neural Network in general), I start with very simple synthetic dataset and compare the Neural Network model with basic linear classifiers, e.g. logistic regression, SVM, softmax regression. Neural Network clearly show greater power over simple linear classifier for datasets with complicated patterns to separate. After successfully build a Neural Network model, it was tested on MNIST dataset and easily achieved over 90% accuracy on the testing set. However, fully-connect Neural network is not doing well on the CIFAR-10 dataset and only achieved ~55% accuracy even with 5 hidden layers and some parameter tuning. </p>
+<p>By doing this project, I developed good understanding of each components in Neural Network and Convolutional Neural Network, as well as their difference. Details will be discussed in each Section. </p>
+<h3 id="data">Data</h3>
+<p>The datasets used in this project are:</p>
+<ul>
+<li><p>The <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 dataset</a> consists of 32x32 3-color images in 10 classes (plane, car, bird, cat, deer, dog, frog, horse, ship, truck). The input features are the values of each pixels, for color Red, Green or Blue. The range of the pixel values are 0--255. In total, there are $32\times32\times3=3072$ features. The whole dataset was split into 49,000 training examples, 1000 validation examples and 1000 testing examples. In the validation and testing dataset, we are going to use the trained model on the training set, to use the images as input and predict its class label. Then the predicted class label will be compared with the true class label to estimate accuracy.</p>
+<p>  It is very important to zero-center the data, and it is common to see normalization of every pixel as well. Preprocessing of the CIFAR-10 dataset is simply removing the mean of each feature. However, the features are not normalized, since the following batch normalization (Section 2.2) has similar effect by doing zero-center and normalize the output of each layer in the Neural Network.</p>
+</li></ul>
+<div class="highlight highlight-source-python"><pre>    <span class="pl-c"><span class="pl-c">#</span> Preprocessing of CIFAR-10 dataset: Normalize the data, subtract the mean image  </span>
+    mean_image <span class="pl-k">=</span> np.mean(X_train, <span class="pl-v">axis</span><span class="pl-k">=</span><span class="pl-c1">0</span>)  
+    X_train <span class="pl-k">-=</span> mean_image  
+    X_val <span class="pl-k">-=</span> mean_image  
+    X_test <span class="pl-k">-=</span> mean_image  </pre></div>
+<center><br><figure><br>  <p><img src="figures/cifar-10_examples.png"  width="800" alt="The Pulpit Rock"><br>  <p>Figure 1. - Seven random sample images of each class.<br></figure><br></center>
+
+<ul>
+<li><p>The <a href="http://yann.lecun.com/exdb/mnist/">MNIST database of handwritten digits</a>, has 70,000 32x32 gray-scale images in 10 classes (digit 0 to 9). This dataset is split into 60,000 training examples, 10,000 testing examples. In total, there are 1024 features. Since I did not focus on improving the prediction on MNIST dataset, and the images are in grayscale with similar range of values, this image was not preprocessed. There is also no validation set for this dataset because I did not spend much efforts tuning the hyper-parameters and Neural net structure for this dataset. MNIST is used to test the simple one-layer and two-layer Neural Net I built, which to my surprise, gives very high accuracy on the testing set (over 92%).</p>
+<p>  Figure 2. shows some samples of the MNIST dataset. As you see, some digits can be easily recognized. But some are quite scratchy and even difficult for human to recognize.</p>
+</li></ul>
+<center><br><figure><br>  <p><img src="figures/mnist_examples.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 2. - Eighty samples of the MNIST dataset, handwriting digits.<br></figure><br></center>
+
+<ul>
+<li><p>Synthetic data, with two features (x and y coordinate), are either in two clusters or three clusters with  unique labels for each cluster. These clusters are separated from each other but some of them are linearly separable and some are not. </p>
+<p>  These synthetic dataset will be used to test and compare basic linear classifiers, e.g. logistic regression, SVM, softmax regression and the simple Neural Network model. As you will see, the linearly separable clusters could be easily classified using the linear classifiers. But the non-linearly separable clusters can only be  correctly classified using the Neural Net.</p>
+</li></ul>
+<center><br><figure><br>  <p><img src="figures/loss/output_3_0.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 3. - Two-class linearly separable synthetic data. Each class reprents one unique label.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/loss/output_9_0.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 4. - Three-class linearly separable synthetic data. Each class reprents one unique label.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/loss/output_16_0.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 5. - Three-class non-linearly separable synthetic data. Each class reprents one unique label.<br></figure><br></center>
+
+<p>I did not include the MNIST and CIFAR-10 dataset since they are too large. But it is easy to download them from the link I provided above.</p>
+<h2 id="code-and-algorithm-description">Code and Algorithm description</h2>
+<blockquote>
+<p>If you use Anaconda python, the codes should run smoothly. Just pay attention that except for <code>LossGradientClassifiers.ipynb</code> and <code>CNN_Note_Convolution.ipynb</code>, which run on <code>Python 3</code>, all the other codes and notebooks run on <code>Python 2</code>.</p>
+<p>For Convolutional Neural Networks to run fast. We have implemented of the functionality using <a href="http://cython.org/">Cython</a>; you will need to compile the Cython extension before you can run the code. From the <code>cs231n</code> directory, run the following command:</p>
+<pre><code class="lang-bash">python setup.py build_ext --inplace
+</code></pre>
+</blockquote>
+<p>I use Jupyter notebook for all the following sections. Please check the associated html file for the details of coding and results.</p>
+<ul>
+<li>LossGradientClassifiers.ipynb -&gt; <em>Section 1</em> <code>Python 3</code></li><li>FullyConnectedNets.ipynb -&gt; <em>Section 2</em> <code>Python 2</code><ul>
+<li>Dropout.ipynb -&gt; <em>Section 2.1</em> <code>Python 2</code></li><li>BatchNormalization.ipynb -&gt; <em>Section 2.2</em> <code>Python 2</code></li></ul>
+</li><li>ConvolutionalNetworks.ipynb -&gt; <em>Section 3</em> <code>Python 2</code><ul>
+<li>CNN_Note_Convolution.ipynb -&gt; <em>Section 3.1</em> <code>Python 3</code></li></ul>
+</li></ul>
+<p>I worked on the assignment of Stanford class CS231n and included some parts into this reports. So the cs231n folder has lots of facilitating code written by CS231n instructors, including visualization, solver, structures of Neural Network model (just empty class and empty member functions). Notebooks, <code>FullyConnectedNets.ipynb, Dropout.ipynb, BatchNormalization.ipynb, ConvolutionalNetworks.ipynb</code>, are the homework assignment of CS231n. Of course, they just has some framework to check whether your solution is correct and students need to fill in those four notebooks.</p>
+<hr>
+<p><strong>Structures of (Convolutional) Neural Network</strong></p>
+<center><br><figure><br>  <p><img src="figures/neuron_model.jpeg"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 6. - Basic component in Neural Net, connection of neurons in the previous layer to one neuron inthe next layer, which is computing a dot product of their weights with the input followed by a non-linearity activation function.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/neural_net.jpeg"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 7. - Simple one-hidden-layer Neural Net model. The output layer is just a linear classifier, such as softmax.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/depthcol.jpeg"  width="200" alt="The Pulpit Rock"><br>  <p>Figure 8. - Demonstration of a Convolutional Layer. Compared with the fully-connected layer, the  main differences are: 1) the input is just a smaller region of the whole input data; 2) the output for one regional input is positioned horizontally and form a 3D output for all the regional input combined.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/cnn.jpeg"  width="500" alt="The Pulpit Rock"><br>  <p>Figure 9. - Several Convolutional layers connected.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/convNet.png"  width="800" alt="The Pulpit Rock"><br>  <p>Figure 10. - A complex Convolutional Neural Net, which is Conv layer -&gt; pooling -&gt; Conv layer -&gt; pooling -&gt; two fully-connected layer -&gt; out prediction.<br></figure><br></center>
+
+<hr>
+<p><strong>The Codes and Jupyter notebooks that I wrote are listed as below:</strong></p>
+<p><code>LossGradientClassifiers.ipynb</code> contains summary and comparison between different linear classifiers and simple Neural Network.</p>
+<p><code>CNN_Note_Convolution.ipynb</code> contains my personal note and understanding of the &quot;Convolutional Neural Network&quot;. Among different resources I can find online, I think my note most clearly explains why CNN is called &quot;Convolutional&quot; and how to implement the forward and backward propagation.</p>
+
+<p><code>layers.py</code> has all the founding bricks for neural net:</p>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">affine_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the forward pass for an affine (fully-connected) layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">affine_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the backward pass for an affine layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">relu_forward</span>(<span class="pl-smi">x</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the forward pass for a layer of rectified linear units (ReLUs).</span>
+<span class="pl-k">def</span> <span class="pl-en">relu_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the backward pass for a layer of rectified linear units (ReLUs).</span>
+<span class="pl-k">def</span> <span class="pl-en">batchnorm_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">gamma</span>, <span class="pl-smi">beta</span>, <span class="pl-smi">bn_param</span>) <span class="pl-c"><span class="pl-c">#</span> Forward pass for batch normalization.</span>
+<span class="pl-k">def</span> <span class="pl-en">batchnorm_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Backward pass for batch normalization.</span>
+<span class="pl-k">def</span> <span class="pl-en">dropout_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">dropout_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Performs the forward pass for (inverted) dropout.</span>
+<span class="pl-k">def</span> <span class="pl-en">dropout_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Perform the backward pass for (inverted) dropout.</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_forward_naive</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>, <span class="pl-smi">conv_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> An implementation of the forward pass for a convolutional layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_backward_naive</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> An implementation of the backward pass for a convolutional layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">max_pool_forward_naive</span>(<span class="pl-smi">x</span>, <span class="pl-smi">pool_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> An implementation of the forward pass for a max pooling layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">max_pool_backward_naive</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>)
+<span class="pl-c"><span class="pl-c">#</span> An implementation of the backward pass for a max pooling layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">spatial_batchnorm_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">gamma</span>, <span class="pl-smi">beta</span>, <span class="pl-smi">bn_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the forward pass for spatial batch normalization.</span>
+<span class="pl-k">def</span> <span class="pl-en">spatial_batchnorm_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the backward pass for spatial batch normalization.</span>
+<span class="pl-k">def</span> <span class="pl-en">svm_loss</span>(<span class="pl-smi">x</span>, <span class="pl-smi">y</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the loss and gradient using for multiclass SVM classification.</span>
+<span class="pl-k">def</span> <span class="pl-en">softmax_loss</span>(<span class="pl-smi">x</span>, <span class="pl-smi">y</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Computes the loss and gradient using for multiclass Softmax classification.</span></pre></div>
+
+<p><code>layer_utils.py</code> has some convenient wrapper of this bricks to form founding blocks.</p>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">affine_relu_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Convenience layer that perorms an affine transform followed by a ReLU</span>
+<span class="pl-k">def</span> <span class="pl-en">affine_relu_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Backward pass for the affine-relu convenience layer</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_relu_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>, <span class="pl-smi">conv_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> A convenience layer that performs a convolution followed by a ReLU.</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_relu_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Backward pass for the conv-relu convenience layer.</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_relu_pool_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>, <span class="pl-smi">conv_param</span>, <span class="pl-smi">pool_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Convenience layer that performs a convolution, a ReLU, and a pool.</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_relu_pool_backward</span>(<span class="pl-smi">dout</span>, <span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Backward pass for the conv-relu-pool convenience layer</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_norm_relu_pool_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>, <span class="pl-smi">gamma</span>, <span class="pl-smi">beta</span>, <span class="pl-smi">conv_param</span>, <span class="pl-smi">pool_param</span>, <span class="pl-smi">bn_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Convenience layer that performs a convolution, a spatial batch normalization, a ReLU, and a pool.</span>
+<span class="pl-k">def</span> <span class="pl-en">conv_norm_relu_pool_backward</span>(<span class="pl-smi">dout</span>,<span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Backward pass for the conv-norm-relu-pool convenience layer</span>
+<span class="pl-k">def</span> <span class="pl-en">affine_norm_relu_forward</span>(<span class="pl-smi">x</span>, <span class="pl-smi">w</span>, <span class="pl-smi">b</span>, <span class="pl-smi">gamma</span>, <span class="pl-smi">beta</span>, <span class="pl-smi">bn_param</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Convenience layer that performs an affine, a batchnorm, and a ReLu.</span>
+<span class="pl-k">def</span> <span class="pl-en">affine_norm_relu_backward</span>(<span class="pl-smi">dout</span>,<span class="pl-smi">cache</span>) 
+<span class="pl-c"><span class="pl-c">#</span> Backward pass for the affine-batchnorm-relu convenience layer</span></pre></div>
+
+<p><code>optim.py</code> has all different ways to update the parameters:</p>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">sgd</span>(<span class="pl-smi">w</span>, <span class="pl-smi">dw</span>, <span class="pl-smi">config</span><span class="pl-k">=</span><span class="pl-c1">None</span>)  <span class="pl-c"><span class="pl-c">#</span> Performs vanilla stochastic gradient descent.</span>
+<span class="pl-k">def</span> <span class="pl-en">sgd_momentum</span>(<span class="pl-smi">w</span>, <span class="pl-smi">dw</span>, <span class="pl-smi">config</span><span class="pl-k">=</span><span class="pl-c1">None</span>) <span class="pl-c"><span class="pl-c">#</span> Performs stochastic gradient descent with momentum.</span>
+<span class="pl-k">def</span> <span class="pl-en">sgd_Nesterovmom</span>(<span class="pl-smi">w</span>, <span class="pl-smi">dw</span>, <span class="pl-smi">config</span><span class="pl-k">=</span><span class="pl-c1">None</span>) <span class="pl-c"><span class="pl-c">#</span> Performs stochastic gradient descent with Nesterov Momentum.</span>
+<span class="pl-k">def</span> <span class="pl-en">rmsprop</span>(<span class="pl-smi">x</span>, <span class="pl-smi">dx</span>, <span class="pl-smi">config</span><span class="pl-k">=</span><span class="pl-c1">None</span>) <span class="pl-c"><span class="pl-c">#</span> Uses the RMSProp update rule</span>
+<span class="pl-k">def</span> <span class="pl-en">adagrad</span>(<span class="pl-smi">x</span>, <span class="pl-smi">dx</span>, <span class="pl-smi">config</span><span class="pl-k">=</span><span class="pl-c1">None</span>) <span class="pl-c"><span class="pl-c">#</span> Uses the Adagrad update rule</span>
+<span class="pl-k">def</span> <span class="pl-en">adam</span>(<span class="pl-smi">x</span>, <span class="pl-smi">dx</span>, <span class="pl-smi">config</span><span class="pl-k">=</span><span class="pl-c1">None</span>) <span class="pl-c"><span class="pl-c">#</span> Uses the Adam update rule</span></pre></div>
+
+<p>For more information about these parameter update methods, visit <a href="http://cs231n.github.io/neural-networks-3/">CS231n class notes</a>, <a href="http://sebastianruder.com/optimizing-gradient-descent/">Sebastian Ruder blog</a>, <a href="http://int8.io/comparison-of-optimization-techniques-stochastic-gradient-descent-momentum-adagrad-and-adadelta/#AdaDelta_8211_experiments">Int8 blog</a>.</p>
+<p>Among all these methods for parameter updating, <code>Adam</code> seems to be the best one for Neural Net model.</p>
+<center><br><figure><br>  <p><img src="figures/FullyConnectedNets/output_44_1.png"  width="600" alt="The Pulpit Rock"><br>  <p>Figure 11. - Different parameter update methods. Adam has the best performance on the validation accuracy score. And AdaGrad (including AdaDelta) does not do well with Neural Net, which is known.<br></figure><br></center>
+
+<p> <code>cs231n/classifiers/fc_net.py</code> is fully-connect Neural Net and has two classes:</p>
+<ul>
+<li><p><code>class TwoLayerNet(object)</code>  A two-layer fully-connected neural network with ReLU nonlinearity and<br>softmax loss.</p>
+</li><li><p><code>class FullyConnectedNet(object)</code> is a fully-connected neural network with an arbitrary number of hidden layers, ReLU nonlinearities, and a softmax loss function. This will also implement dropout and batch normalization as options. For a network with N hidden layers, the architecture will be<br><code>{affine - [batch norm] - relu - [dropout]} x (N) - affine - softmax</code></p>
+</li></ul>
+<p><code>cs231n/classifiers/cnn.py</code> contains <code>class ThreeLayerConvNet(object)</code>, which is a three-layer convolutional network with the following architecture:<br><code>conv - [spatial batch norm] - relu - 2x2 max pool - affine - relu - affine - softmax</code></p>
+<p><code>cs231n/classifiers/complex_cnn.py</code> contains <code>class MineConvNet(object)</code>, which is the more complex CNN as the final model to train the CIFAR-10 dataset, it also has a flexible structure (N Conv layers and M fully-connect layers) for the user to define:<br><code>(conv-[spatial batch norm]-relu-pool) X N - (affine-[batch norm]-relu-[dropout]) X M - affine - softmax</code> </p>
+<h2 id="section-1-basics-of-logistic-regression-softmax-regression-svm-and-simple-neural-network">Section 1 -- Basics of Logistic Regression, Softmax Regression, SVM and Simple Neural Network</h2>
+<blockquote>
+<p>Dataset: Synthetic dataset, MNIST dataset<br>File: LossGradientClassifiers.ipynb</p>
+</blockquote>
+<p>Even for the Neural Network model, taking out all the hidden structures between the input the and output layer, it will simply be a Softmax or multiclass SVM linear classifier. So we should first understand these linear classifiers before digging into the Neural Net. Some commonly used linear classifiers are Logistic regression, binary SVM for binary classes, Softmax regression and multi-class SVM for multiple classes. I summarized the differences between different classifiers, their limitations and capabilities with synthetic examples.</p>
+<h3 id="theory-different-classifiers-and-their-loss-function-and-gradient">Theory --  Different classifiers and their loss function and gradient</h3>
+<h4 id="loss-function-and-gradient">Loss function and Gradient</h4>
+<p>In neural network, there are lots of linear relationships between the neurons (variables within the neural network). </p>
+<p>Take the simpliest case, where the input $X$ is of dimension $N\times D$, with $D$ features and $N$ instances. There are $C$ classes to be identified. ($x_i$, $y_i$) is one instance, where $x_i$ is a row of $X$ and $y_i$ is a number to represent one class. $y_i \in {0 \dots C-1 }$ The weight parameter of the linear relationship is $W$, of dimension $D \times C$. There is also another parameter called bias, $b$, which just give some shift and has dimension of $C$.</p>
+<p>To simplify the notations, we define,<br>$f(x_i;W,b)=W^T x_i+b$<br>In which,<br>$w_j$ is the $j$th column of $W$, $b_j$ is the $j$th item of $b$.</p>
+<p>We also define,<br>$f_j^i=f(x_i;W,b)_j=w_j^T x_i+b_j$</p>
+<h5 id="loss-function">Loss function</h5>
+<p>The total loss functions is defined to be a combination of data loss and regularization term on parameters.<br>$$<br>L=\frac{1}{N}\sum_i^{N} L_i+\frac{1}{2}\lambda||W||^2<br>$$</p>
+<p>Here the regularization on weight is defined as L2 norm.</p>
+<h5 id="gradient">Gradient</h5>
+<p>$$<br>\frac{\partial L}{\partial w_j}=\frac{1}{N}\sum_i^{N}\frac{\partial L_i}{\partial w_j}+\lambda w_j \\<br>\frac{\partial L}{\partial b_j}=\frac{1}{N}\sum_i^{N}\frac{\partial L_i}{\partial b_j}<br>$$</p>
+<p>Both the loss function and the form of gradient calculation are in general form. Different regression methods defined different form of $L_i$.</p>
+<h4 id="binary-classes">Binary classes</h4>
+<p>For binary classes, we just need to predict one of the two classes. If one class is less likely, then the other class should be the most possible one. </p>
+<p>In binary classes case, the weights collapse from matrix $W$ to a vector $w$ of size $C$. The bias also collapse from a vector to a scalar, but still denoted as $b$ for reason of being lazy. </p>
+<h5 id="logistic-regression">Logistic regression</h5>
+<p>In logistic regression, define the probability of $y$ as $p(y)=\sigma(y)$,<br>where $\sigma(y)$ is the &quot;sigmoid&quot; or &quot;logistic&quot; function,<br>$\sigma(y)=\frac{1}{1+e^{-y}}$. $y_i \in {0,1}$. To predict $y$ with $x_i$, simply check wether $p(f(x_i;w,b))$ is closer to 1 or 0. (Or just check the sign of $f(x_i;w,b)$). Logistic regression nicely give the probability of the prediction in addition to the prediction itself. </p>
+<p><strong>Loss</strong><br>$$<br>L_i=-(y_i \log(p(f(x_i;w,b)))+(1-y_i)\log(1-p(f(x_i;w,b))))<br>$$</p>
+<p><strong>Gradient</strong><br>$$<br>\frac{\partial L}{\partial w}=x_i(p(f(x_i;w,b)-y_i) \\<br>\frac{\partial L}{\partial b}=(p(f(x_i;w,b)-y_i)<br>$$</p>
+<h5 id="binary-svm">Binary SVM</h5>
+<p>In binary SVM, for convenience purpose, set $y_i \in {-1,1}$, To predict $y$ with $x_i$, simply check wether $f(x_i;w,b)$ is positive (indicate $y_i = 1$) or negative (indicate $y_i = -1$). </p>
+<p><strong>Loss</strong><br>$$<br>L_i=C\max(0,1 -  y_i f(x_i;w,b) )<br>$$</p>
+<p>$C$ is a hyper-paramter. However, because we have included the regularization, which has the same effect, $C$ can be set to one. </p>
+<p><strong>Gradient</strong></p>
+<p>$$<br>\frac{\partial L}{\partial w} =<br>\begin{cases}<br>-x_i y_i,  &amp; \text{if $1 -  y_i f(x_i;w,b)&gt;0$} \\<br>0, &amp; \text{else}<br>\end{cases}<br>$$</p>
+<p>$$<br>\frac{\partial L}{\partial b} =<br>\begin{cases}<br>-y_i,  &amp; \text{if $1 -  y_i f(x_i;w,b)&gt;0$} \\<br>0, &amp; \text{else}<br>\end{cases}<br>$$</p>
+<h4 id="multiple-classes">Multiple classes</h4>
+<h5 id="softmax-regression">Softmax regression</h5>
+<p>Softmax regression is a general form of logistic regression for multiclass case. In softmax regression, define probability $p(y=k|x_i)=\frac{e^{f_{k}^i}}{\sum_j e^{f_{j}^i}}$. To predict, just check which $k$ gives the largest probability $p(y=k|x_i)$.</p>
+<p><strong>Loss</strong><br>$$<br>L_i=-\log(p(y_i|x_i))<br>$$</p>
+<p><strong>Gradient</strong><br>$$<br>\frac{\partial L_i}{\partial w_j}=x_i(p(y_i|x_i)-1(y_i=j)) \\<br>\frac{\partial L_i}{\partial b_j}=(p(y_i|x_i)-1(y_i=j))<br>$$</p>
+<h5 id="multiclass-svm">Multiclass SVM</h5>
+<p>Multiclass SVM regression is a general form of binary SVM regression for multiclass case. To predict, just check which $k$ gives the largest value of $f(x_i;W,b)_k$.</p>
+<p><strong>Loss</strong></p>
+<p>$$<br>L_i=\sum_{j \neq y_i} \max(0,f_j^i -f_{y_i}^i + \Delta )<br>$$</p>
+<p>$\Delta$ is the margin, a hyper-paramter. However, because we have included the regularization, which has the same effect, $\Delta$ can be set to one. </p>
+<p><strong>Gradient</strong></p>
+<p>for $j=y_i$<br>$$<br>\frac{\partial L_i}{\partial w_{y_i}}=-(\sum_{j\neq y_i} 1(f_j^i - f_{y_i}^i+\Delta&gt;0))x_i \\<br>\frac{\partial L_i}{\partial b_{y_i}}=-(\sum_{j\neq y_i} 1(f_j^i - f_{y_i}^i+\Delta&gt;0))<br>$$</p>
+<p>for $j\neq y_i$<br>$$<br>\frac{\partial L_i}{\partial w_j}=1(f_j^i - f_{y_i}^i+\Delta&gt;0)x_i \\<br>\frac{\partial L_i}{\partial b_j}=1(f_j^i - f_{y_i}^i+\Delta&gt;0)<br>$$</p>
+<h3 id="working-with-synthetic-dataset">Working with synthetic dataset</h3>
+<p>The synthetic dataset have been described in the previous section. For the linear classifiers, whether for synthetic data with binary classes or multiple classes, as long as different cluster can be linearly separated, the linear classifiers can be trained on these data to correctly predict their labels.  </p>
+<center><br><figure><br>  <p><img src="figures/loss/output_4_1.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 12. - Logistic regression and Binary SVM classifier can successfully predict the labels.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/loss/output_11_1.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 13. - Softmax regression and multi-class SVM classifier can successfully predict the labels.<br></figure><br></center>
+
+<p>However, when the synthetic data is not linearly separable, linear classifiers can not correctly predict their labels. This is the moment Neural Network starts to show its power. Even simple Neural Net with one hidden layer can predict the labels with high accuracy (97%). And I have tested different activation functions, including ReLu, Sigmoid, Tanh functions. Among them, ReLu has the best convergence speed and stability. For details, check <code>LossGradientClassifiers.ipynb</code>. </p>
+<center><br><figure><br>  <p><img src="figures/loss/output_18_1.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 14. - Linear classifiers failed to predict the labels. Accuracy is ~50%.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/loss/output_24_1.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 15. - One-layer Neural Net model with ReLu activation function predict the synthetic datset with 97% accuracy.<br></figure><br></center>
+
+
+
+<h4 id="simple-neural-network-model-trained-with-mnist-dataset">Simple Neural Network model trained with MNIST dataset</h4>
+<p>The simple Neural Network is also applied to MNIST hand-writing digits dataset. With my code for one-layer and two layer Neural Net models, the predicted labels has high accuracy on both the training set and testing set (over 90%). For details, check <code>LossGradientClassifiers.ipynb</code>. </p>
+<p>With one-layer Neural Net model:<br>After 2000 iterations<br>training accuracy: 93%<br>test set accuracy: 92%</p>
+<p>With two-layer Neural Net model:<br>After 4000 iterations<br>training accuracy: 96%<br>test set accuracy: 93%</p>
+<hr>
+<p>Later we will use CIFAR-10 data to train our Neural Net models. CIFAR-10 data is much more complicated than the MNIST data. As you will see, simple Neural Net model will not do well with CIFAR-10 data. And even multi-layers fully-connected Neural Net model can not predict the labels on the validation set with high accuracy. For CIFAR-10, we need to use more complicated Convolutional Neural Net models.</p>
+<h2 id="section-2-fully-connected-neural-network">Section 2. Fully connected neural network</h2>
+<blockquote>
+<p>Dataset: CIFAR-10 dataset<br>File: FullyConnectedNets.ipynb</p>
+</blockquote>
+<p>This Section build more complex fully-connected Neural Network and train it with more complex CIFAR-10 dataset. After having the foundation of modules of forward propagation and backpropagation of a fully-connect layer, we can easily build more complicated neural network with arbitrary number of hidden layers.</p>
+<p>With the entire 49,000 training dataset, one-layer fully-connected Neural Net with 200 neurons in the hidden layer gives 52% accuracy on the validation set. Five-layer fully-connected Neural Net with 100 neurons in each hidden layer gives 54.3% accuracy on both the validation set and testing set. These accuracy scores are far from satisfying. We will develop more complex Convolutional Neural Network models in the next section and achieve much better accuracy score.</p>
+<center><br><figure><br>  <p><img src="figures/FullyConnectedNets/output_22_0.png"  width="500" alt="The Pulpit Rock"><br>  <p>Figure 16. - One-layer Neural Net model with 200 neurons in the hidden layer. Parameters for this run is num_epochs=10, batch_size=100, iterations=4900. Training accuracy is 62.5%, validation accuracy is 52%.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/FullyConnectedNets/output_50_1.png"  width="500" alt="The Pulpit Rock"><br>  <p>Figure 17. - Five-layer fully-connected Neural Net with 100 neurons in each hidden layer. Parameters for this run is num_epochs=8, batch_size=100, iterations=3920. Training accuracy is 66.2%, validation accuracy is 54.3%, testing accuracy is 54.3%.<br></figure><br></center>
+
+
+<hr>
+<p>This section also applies the Dropout and Batch normalization. Dropout help overcome overfitting problem and will give better accuracy score on the validation and testing set. Batch normalization normalize the output of each Neural layer and reduces the sensitivity to the initialization of the weight, which is another hyper-parameter to turn without batch normalization. Dropout and Batch normalization will be explained in the following two sub-sections.</p>
+<h3 id="section-2-1-dropout">Section 2.1. Dropout</h3>
+<blockquote>
+<p>Dataset: CIFAR-10 dataset<br>File: Dropout.ipynb</p>
+</blockquote>
+<p>Dropout seems to be a &quot;Mysterious&quot; technique. In practice, dropout avoid overfitting and relying too much on some nodes by randomly ignoring them. <a href="http://cs231n.github.io/neural-networks-2/">CS231n dropout section</a> shows how to do the dropout in practice.</p>
+<center><br><figure><br>  <p><img src="figures/dropout.jpeg"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 18. - During training, Dropout can be interpreted as sampling a Neural Network within the full Neural Network, and only updating the parameters of the sampled network based on the input data.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/Dropout/output_11_0.png"  width="500" alt="The Pulpit Rock"><br>  <p>Figure 19. - 0 dropout means no dropout is applied. 0.5 and 0.75 dropout mean 50% and 25% of the input data is randomly discarded in each iteration of training. This figure clearly shows that dropout give better validation score although the training score is not as good as without dropout. However, validation and testing score is the most important metrics for the model.<br></figure><br></center>
+
+<h3 id="section-2-2-batch-normalization-and-spatial-batch-normalization">Section 2.2 Batch normalization and spatial batch normalization</h3>
+<blockquote>
+<p>Dataset: CIFAR-10 dataset<br>File: BatchNormalization.ipynb</p>
+</blockquote>
+<p>Batch normalization normalize the input before the activation function to be zero mean and unit variance. In practice, using batch normalization will make the neural network less sensitive to value of weight scale used in weight initialization. <a href="http://cthorey.github.io./backpropagation/">Clément thorey&#39;s blog</a> gives nice explanation of batch normalization. Actually, once you know the equation of batch normalization, it should be quite easy to derive the form of backpropagation (just use the chain rule).</p>
+<center><br><figure><br>  <p><img src="figures/BatchNormalization/output_15_0.png"  width="500" alt="The Pulpit Rock"><br>  <p>Figure 20. - In the baseline model, the weight scale for the weight initialization is 0.02. It is clear that with batch normalization, both the training accuracy and the validation accuracy are improved.<br></figure><br></center>
+
+<center><br><figure><br>  <p><img src="figures/BatchNormalization/output_18_0.png"  width="500" alt="The Pulpit Rock"><br>  <p>Figure 21. - Without batch normalization, only the weight initialization scale around $10^{-1}$ gives the best score, while other weight initialization scale values give much worse accuracy score. However, with the batch normalization, the difference between different weight initialization scale is not so dramatic.<br></figure><br></center>
+
+<h2 id="section-3-convolutional-neural-network">Section 3 Convolutional neural network</h2>
+<blockquote>
+<p>Dataset: CIFAR-10 dataset<br>File: ConvolutionalNetworks.ipynb</p>
+</blockquote>
+<p>Eventually, we come to the powerful Convolutional Neural Network! The first simple Conv Net model trained on the CIFAR-10 dataset looks like:</p>
+<p><code>conv - spatial batch norm - relu - 2x2 max pool - affine - relu - affine - softmax</code></p>
+<p>This is the most basic Conv Net model. After 980 iterations with batchsize=50, the training accuracy is 50.8% and validation accuracy is 52.2%. This score makes Conv Net models promising in achieving better accuracy scores after building a more complicated Conv Net model. In the Conv layer, 32 filters was used. In this figure below, each filter represents some edge features or color patterns. </p>
+<center><br><figure><br>  <p><img src="figures/ConvolutionalNetworks/output_31_0.png"  width="400" alt="The Pulpit Rock"><br>  <p>Figure 22. - Weights of 32 filters in the Conv Net model trained on CIFAR-10 dataset.<br></figure><br></center>
+
+<p>Eventually, I build a flexible CNN (<code>class MineConvNet</code> in cs231n/classifiers/complex_cnn.py), allowing user to expand the number of the Convolutional layers and number of the fully-connected layers. MineConvNet also included the functionality of dropout for the fully-connected layers, batch normalization and spatial batch normalization for the full-connected and convolutional layers respectively.</p>
+<p>There are two models I trained on CIFAR-10 dataset:</p>
+<p>Model 1: <code>(conv-spatial batch norm-relu-pool) X 3 - (affine-batch norm-relu-dropout) X 1 - affine - softmax</code> </p>
+<p>Model 2: <code>(conv-spatial batch norm-relu-pool) X 3 - (affine-batch norm-relu-dropout) X 2 - affine - softmax</code> </p>
+<p>These two Conv Net Models are slightly different in structure. Model 1 has 3 Conv layers with filter size [32, 32, 32] and 1 following fully-connected layer, size [500]. Model 2 has 3 Conv layers with filter size [16, 32, 64] and 2 following fully-connected layer, size [256, 256]. Both models were trained for 49,000 iterations, with batch_size=50, num_epochs=50. The training and validation accuracy scores on Model 1 are 96.5% and 79.5%, on Model 2 are 97.7%, 78.3%. </p>
+<p>In the end, I created an ensemble model by combining these two trained Conv Net models. Prediction with the ensemble model gives accuracy of the validation set and testing set to be 80.4% and 80.3%. It is a huge improvement from the fully-connected network, which is just 55% on testing score. </p>
+<p>The 80% accuracy score was achieved without extensive testing on hyper-parameters. If optimal parameters and Conv Net structures were chosen, I believe the accuracy score will be further improved. Because all of my code is in python (using numpy a lot), it is too too slow to train the complex models (Several hours for the final complex Conv Net model to run 50 epochs). It is definitely necessary to use GPU to train more complex Neural Network models. But I don&#39;t have the time and efforts at this moment to rewrite all these code into CUDA C. This is some future task for myself. </p>
+<h3 id="section-3-1-cnn-forward-propagation-and-backpropagation">Section 3.1 CNN forward propagation and backpropagation</h3>
+<blockquote>
+<p>File: CNN_Note_Convolution.ipynb</p>
+</blockquote>
+<p>After I understand the structure of normal Neural Network with just fully-connected layers, I was puzzled by Convolutional Neural Network. Why is it called &quot;Convolutional&quot;, because convolution is a technique in signal or image processing. And how is the structure different from full-connect Neural Net and how to do forward and backward propagation with Convolutional Neural Network. Below is my notes on the math and tricks for Convolutional Neural Network foward and backward propagation. I have coded my understanding and it passed the unit test. For details, check <code>CNN_Note_Convolution.ipynb</code>.</p>
+<h4 id="convolutional-neural-network-implementation">Convolutional Neural Network implementation</h4>
+<p>In CNN, the input image $X$ is of dimension $N\times C \times H \times W$, the filter $F$ is of dimension $F\times C \times HH \times WW$, the output $Y$ is of dimension $N\times F\times Hd \times Wd$. In this note, for simplicity reason, we look at one input example ($N=1$), assume one color layer of input ($C=1$), only one filter ($F=1$), thus all the input, filter, output are 2d matrices.</p>
+<h5 id="forward-propogation">Forward propogation</h5>
+<p>$X$ is of dimension $H \times W$, $F$ is of dimension $HH\times WW$, if the padding size is $P$, the stride is $S$, then the output $Y$ has dimension $Hd\times Wd$.<br>$$<br>Hd=1+(H+2P-HH)/S \\<br>Wd=1+(W+2P-WW)/S<br>$$</p>
+<p>$$<br>Y_{kl}=\sum_{i=0}^{HH-1} \sum_{j=0}^{WW-1} F_{ij} X_{i+kS, j+lS}<br>$$</p>
+<p>Or we can write this equation in another form<br>$$<br>Y_{kl}=\sum_{m=kS}^{HH-1+kS} \sum_{n=lS}^{WW-1+lS} F_{m-kS,n-lS} X_{mn}<br>$$</p>
+<p>If we make a very simple neural network, without hidden layer and activation function. The loss function is defined as<br>$$<br>L=\sum_k^{Hd-1} \sum_l^{Wd-1} f(Y_{kl})<br>$$<br>$f()$ is some defined function to calculate the total loss. </p>
+<p>Then the Gradient $L$ with respect to $X$ and $F$ are<br>$$<br>\begin{align}<br>\frac{\partial L}{\partial F_{ij}}&amp;=\sum_k^{Hd-1} \sum_l^{Wd-1} f&#39;(Y_{kl})\frac{\partial Y_{kl}}{\partial F_{ij}} \nonumber \\<br>&amp;=\sum_k^{Hd-1} \sum_l^{Wd-1} f&#39;(Y_{kl})X_{i+kS,j+lS} \nonumber<br>\end{align}<br>$$</p>
+<p>$$<br>\begin{align}<br>\frac{\partial L}{\partial X_{mn}}&amp;=\sum_k^{Hd-1} \sum_l^{Wd-1} f&#39;(Y_{kl})\frac{\partial Y_{kl}}{\partial X_{mn}} \nonumber \\<br>&amp;=\sum_k^{Hd-1} \sum_l^{Wd-1} f&#39;(Y_{kl})F_{m-kS,n-lS} \nonumber<br>\end{align}<br>$$<br>in which, $f&#39;(Y)$ is of dimension $Hd\times Wd$, same as $Y$.</p>
+<h5 id="where-is-convolution-why-180-circ-rotation-">Where is convolution? Why $180^\circ$ rotation?</h5>
+<p>OK, for simplicity, let&#39;s assume there is no padding and stride is one ($P=0,S=1$).</p>
+<p>Then we get $Hd=1+H-HH, Wd=1+W-WW$</p>
+<p>$$<br>Y_{kl}=\sum_{i=0}^{HH-1} \sum_{j=0}^{WW-1} F_{ij} X_{i+k, j+l}<br>$$<br>This is actually the cross-correlation of $F$ and $X$, $F\star X$. Cross-correlation and convolution are quite similar to each other, in terms of calculation. We know that $\bar F \ast X = F \star X$, where $\bar F$ is the $180^\circ$ rotation of $F$. $180^\circ$ rotation is just another way to say 2D flip.</p>
+<p>If we flip the Filter right-left and up-down, $\bar F_{HH-1-i,WW-1-j}=F_{ij}$, then after some rearrangement of the index, we get<br>$$<br>Y_{kl}=\sum_{i=0}^{HH-1} \sum_{j=0}^{WW-1} \bar F_{ij} X_{k-i+HH-1, l-j+WW-1}<br>$$<br>Which is exactly 2D convolution, $\bar F \ast X$.<br>And after careful check of the index of X, it never goes out of bound and exactly traverses from $0$ to $H-1$ for $k-i+HH-1$, $0$ to $W-1$ for $l-j+WW-1$, means that this convolution has mode of &quot;Valid&quot;.</p>
+<p>For gradient, we also have<br>$$<br>\frac{\partial L}{\partial F_{ij}}=\sum_k^{Hd-1} \sum_l^{Wd-1} f&#39;(Y_{kl})X_{i+k,j+l}<br>$$</p>
+<p>$$<br>\frac{\partial L}{\partial X_{mn}}=\sum_k^{Hd-1} \sum_l^{Wd-1} f&#39;(Y_{kl})F_{m-k,n-l}<br>$$</p>
+<p>It is clear to see that $\frac{\partial L}{\partial F_{ij}} = \bar f&#39;(Y) \ast X $ in &quot;Valid&quot; mode and $\frac{\partial L}{\partial X_{mn}} = f&#39;(Y) \ast F $ in &quot;Full&quot; mode. $\bar f&#39;(Y)$ is the $180^\circ$ rotation of $f(Y)$.</p>
+<blockquote>
+<p>Note that when $S&gt;1$, it is no longer standard cross-correlation of convolution. But I guess it might be a convention to call this method Convolutional Neural Network. </p>
+</blockquote>
+<h5 id="a-better-way-to-calculate-gradient">A better way to calculate gradient</h5>
+<p>In calculating $\frac{\partial L}{\partial X_{mn}}$, altough the equation is clear, the index of $F$ will go out of bound. For the out of bound index of $F$, we need to set them to be zeros. This can be done by some <code>if else</code> check, or just pad lots of zeros to $F$ to form a new filter. And it will not be easy to figure out correctly with padding $P&gt;0$ and strike $S&gt;1$.</p>
+<p>A trick to calculate $\frac{\partial L}{\partial X_{mn}}$ is that, instead of fixing the index of $X$, then figuring out the index of $f&#39;(Y)$ , we fix the index of $f&#39;(Y)$, then figure out the index of $X$. </p>
+<p>$$<br>\frac{\partial L}{\partial X_{i+kS,j+lS}}=\sum_k^{Hd-1} \sum_l^{Wd-1}f&#39;(Y_{kl})F_{ij}<br>$$<br>The index $i,j$ will traverse the whole size of the filter $F$, and there is no need to concern about the index of $X$. This method is actually to &quot;Think backward&quot; of the forward propogation. This idea was inspired by discussion with Siyuan Wang. </p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
