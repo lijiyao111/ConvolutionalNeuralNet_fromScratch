@@ -56,7 +56,7 @@ Figure 1. - Seven random sample images of each class.
 <p align="center">
 <img src="figures/mnist_examples.png"  width="400" alt="The Pulpit Rock">
 <p>
-</br>
+<br>
 Figure 2. - Eighty samples of the MNIST dataset, handwriting digits.
 </center>
 
@@ -86,6 +86,7 @@ I did not include the MNIST and CIFAR-10 dataset since they are too large. But i
 
 
 ## Code and Algorithm description
+
 > If you use Anaconda python, the codes should run smoothly. Just pay attention that except for `LossGradientClassifiers.ipynb` and `CNN_Note_Convolution.ipynb`, which run on `Python 3`, all the other codes and notebooks run on `Python 2`.
 > 
 > For Convolutional Neural Networks to run fast. We have implemented of the functionality using [Cython](http://cython.org/); you will need to compile the Cython extension before you can run the code. From the `cs231n` directory, run the following command:
@@ -239,6 +240,7 @@ Figure 11. - Different parameter update methods. Adam has the best performance o
 
 
 ## Section 1 -- Basics of Logistic Regression, Softmax Regression, SVM and Simple Neural Network
+
 > Dataset: Synthetic dataset, MNIST dataset  
 > File: LossGradientClassifiers.ipynb
 
@@ -425,6 +427,7 @@ test set accuracy: 93%
 Later we will use CIFAR-10 data to train our Neural Net models. CIFAR-10 data is much more complicated than the MNIST data. As you will see, simple Neural Net model will not do well with CIFAR-10 data. And even multi-layers fully-connected Neural Net model can not predict the labels on the validation set with high accuracy. For CIFAR-10, we need to use more complicated Convolutional Neural Net models.
 
 ## Section 2. Fully connected neural network
+
 > Dataset: CIFAR-10 dataset  
 > File: FullyConnectedNets.ipynb
 
@@ -450,6 +453,7 @@ Figure 17. - Five-layer fully-connected Neural Net with 100 neurons in each hidd
 This section also applies the Dropout and Batch normalization. Dropout help overcome overfitting problem and will give better accuracy score on the validation and testing set. Batch normalization normalize the output of each Neural layer and reduces the sensitivity to the initialization of the weight, which is another hyper-parameter to turn without batch normalization. Dropout and Batch normalization will be explained in the following two sub-sections.
 
 ### Section 2.1. Dropout
+
 > Dataset: CIFAR-10 dataset
 > File: Dropout.ipynb
 
@@ -468,6 +472,7 @@ Figure 19. - 0 dropout means no dropout is applied. 0.5 and 0.75 dropout mean 50
 </p>
 
 ### Section 2.2 Batch normalization and spatial batch normalization 
+
 > Dataset: CIFAR-10 dataset
 > File: BatchNormalization.ipynb
 
@@ -486,6 +491,7 @@ Figure 21. - Without batch normalization, only the weight initialization scale a
 </p>
 
 ## Section 3 Convolutional neural network
+
 > Dataset: CIFAR-10 dataset
 > File: ConvolutionalNetworks.ipynb
 
@@ -517,6 +523,7 @@ The 80% accuracy score was achieved without extensive testing on hyper-parameter
 
 
 ### Section 3.1 CNN forward propagation and backpropagation
+
 > File: CNN_Note_Convolution.ipynb
 
 After I understand the structure of normal Neural Network with just fully-connected layers, I was puzzled by Convolutional Neural Network. Why is it called "Convolutional", because convolution is a technique in signal or image processing. And how is the structure different from full-connect Neural Net and how to do forward and backward propagation with Convolutional Neural Network. Below is my notes on the math and tricks for Convolutional Neural Network foward and backward propagation. I have coded my understanding and it passed the unit test. For details, check `CNN_Note_Convolution.ipynb`.
@@ -595,6 +602,7 @@ It is clear to see that $\frac{\partial L}{\partial F_{ij}} = \bar f'(Y) \ast X 
 >Note that when $S>1$, it is no longer standard cross-correlation of convolution. But I guess it might be a convention to call this method Convolutional Neural Network. 
 
 ##### A better way to calculate gradient
+
 In calculating $\frac{\partial L}{\partial X_{mn}}$, altough the equation is clear, the index of $F$ will go out of bound. For the out of bound index of $F$, we need to set them to be zeros. This can be done by some ```if else``` check, or just pad lots of zeros to $F$ to form a new filter. And it will not be easy to figure out correctly with padding $P>0$ and strike $S>1$.
 
 A trick to calculate $\frac{\partial L}{\partial X_{mn}}$ is that, instead of fixing the index of $X$, then figuring out the index of $f'(Y)$ , we fix the index of $f'(Y)$, then figure out the index of $X$. 
