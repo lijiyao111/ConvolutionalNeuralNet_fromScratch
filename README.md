@@ -42,48 +42,46 @@ The datasets used in this project are:
     X_test -= mean_image  
 ``` 
 
-<center>
-<figure>
-  <p><img src="figures/cifar-10_examples.png"  width="800" alt="The Pulpit Rock">
-  <p>Figure 1. - Seven random sample images of each class. 
-</figure>
-</center>
+<p align="center">
+<img src="figures/cifar-10_examples.png"  width="800" alt="The Pulpit Rock">
+<br>
+Figure 1. - Seven random sample images of each class. 
+</p>
 
-- The [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/), has 70,000 32x32 gray-scale images in 10 classes (digit 0 to 9). This dataset is split into 60,000 training examples, 10,000 testing examples. In total, there are 1024 features. Since I did not focus on improving the prediction on MNIST dataset, and the images are in grayscale with similar range of values, this image was not preprocessed. There is also no validation set for this dataset because I did not spend much efforts tuning the hyper-parameters and Neural net structure for this dataset. MNIST is used to test the simple one-layer and two-layer Neural Net I built, which to my surprise, gives very high accuracy on the testing set (over 92%).
 
-    Figure 2. shows some samples of the MNIST dataset. As you see, some digits can be easily recognized. But some are quite scratchy and even difficult for human to recognize.
+* The [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/), 
+  has 70,000 32x32 gray-scale images in 10 classes (digit 0 to 9). This dataset is split into 60,000 training examples, 10,000 testing examples. In total, there are 1024 features. Since I did not focus on improving the prediction on MNIST dataset, and the images are in grayscale with similar range of values, this image was not preprocessed. There is also no validation set for this dataset because I did not spend much efforts tuning the hyper-parameters and Neural net structure for this dataset. MNIST is used to test the simple one-layer and two-layer Neural Net I built, which to my surprise, gives very high accuracy on the testing set (over 92%).
 
-<center>
-<figure>
-  <p><img src="figures/mnist_examples.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 2. - Eighty samples of the MNIST dataset, handwriting digits.
-</figure>
-</center>
+  * Figure 2. shows some samples of the MNIST dataset. As you see, some digits can be easily recognized. But some are quite scratchy and even difficult for human to recognize.
+
+<p align="center">
+<img src="figures/mnist_examples.png"  width="400">
+<br>
+Figure 2. - Eighty samples of the MNIST dataset, handwriting digits.
+</p>
+
 
 - Synthetic data, with two features (x and y coordinate), are either in two clusters or three clusters with  unique labels for each cluster. These clusters are separated from each other but some of them are linearly separable and some are not. 
 
     These synthetic dataset will be used to test and compare basic linear classifiers, e.g. logistic regression, SVM, softmax regression and the simple Neural Network model. As you will see, the linearly separable clusters could be easily classified using the linear classifiers. But the non-linearly separable clusters can only be  correctly classified using the Neural Net.
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_3_0.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 3. - Two-class linearly separable synthetic data. Each class reprents one unique label.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_3_0.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 3. - Two-class linearly separable synthetic data. Each class reprents one unique label.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_9_0.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 4. - Three-class linearly separable synthetic data. Each class reprents one unique label.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_9_0.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 4. - Three-class linearly separable synthetic data. Each class reprents one unique label.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_16_0.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 5. - Three-class non-linearly separable synthetic data. Each class reprents one unique label.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_16_0.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 5. - Three-class non-linearly separable synthetic data. Each class reprents one unique label.
+</p>
 
 I did not include the MNIST and CIFAR-10 dataset since they are too large. But it is easy to download them from the link I provided above.
 
@@ -111,40 +109,35 @@ I worked on the assignment of Stanford class CS231n and included some parts into
 ----------
 **Structures of (Convolutional) Neural Network**
 
-<center>
-<figure>
-  <p><img src="figures/neuron_model.jpeg"  width="400" alt="The Pulpit Rock">
-  <p>Figure 6. - Basic component in Neural Net, connection of neurons in the previous layer to one neuron inthe next layer, which is computing a dot product of their weights with the input followed by a non-linearity activation function.
-</figure>
-</center>
+<p align="center">
+<img src="figures/neuron_model.jpeg"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 6. - Basic component in Neural Net, connection of neurons in the previous layer to one neuron inthe next layer, which is computing a dot product of their weights with the input followed by a non-linearity activation function.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/neural_net.jpeg"  width="400" alt="The Pulpit Rock">
-  <p>Figure 7. - Simple one-hidden-layer Neural Net model. The output layer is just a linear classifier, such as softmax.
-</figure>
-</center>
+<p align="center">
+<img src="figures/neural_net.jpeg"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 7. - Simple one-hidden-layer Neural Net model. The output layer is just a linear classifier, such as softmax.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/depthcol.jpeg"  width="200" alt="The Pulpit Rock">
-  <p>Figure 8. - Demonstration of a Convolutional Layer. Compared with the fully-connected layer, the  main differences are: 1) the input is just a smaller region of the whole input data; 2) the output for one regional input is positioned horizontally and form a 3D output for all the regional input combined. 
-</figure>
-</center>
+<p align="center">
+<img src="figures/depthcol.jpeg"  width="200" alt="The Pulpit Rock">
+<br>
+Figure 8. - Demonstration of a Convolutional Layer. Compared with the fully-connected layer, the  main differences are: 1) the input is just a smaller region of the whole input data; 2) the output for one regional input is positioned horizontally and form a 3D output for all the regional input combined. 
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/cnn.jpeg"  width="500" alt="The Pulpit Rock">
-  <p>Figure 9. - Several Convolutional layers connected.
-</figure>
-</center>
+<p align="center">
+<img src="figures/cnn.jpeg"  width="500" alt="The Pulpit Rock">
+<br>
+Figure 9. - Several Convolutional layers connected.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/convNet.png"  width="800" alt="The Pulpit Rock">
-  <p>Figure 10. - A complex Convolutional Neural Net, which is Conv layer -> pooling -> Conv layer -> pooling -> two fully-connected layer -> out prediction.
-</figure>
-</center>
+<p align="center">
+<img src="figures/convNet.png"  width="800" alt="The Pulpit Rock">
+<br>
+Figure 10. - A complex Convolutional Neural Net, which is Conv layer -> pooling -> Conv layer -> pooling -> two fully-connected layer -> out prediction.
+</p>
 
 ----------
 
@@ -226,12 +219,11 @@ For more information about these parameter update methods, visit [CS231n class n
 
 Among all these methods for parameter updating, `Adam` seems to be the best one for Neural Net model.
 
-<center>
-<figure>
-  <p><img src="figures/FullyConnectedNets/output_44_1.png"  width="600" alt="The Pulpit Rock">
-  <p>Figure 11. - Different parameter update methods. Adam has the best performance on the validation accuracy score. And AdaGrad (including AdaDelta) does not do well with Neural Net, which is known.
-</figure>
-</center>
+<p align="center">
+<img src="figures/FullyConnectedNets/output_44_1.png"  width="600" alt="The Pulpit Rock">
+<br>
+Figure 11. - Different parameter update methods. Adam has the best performance on the validation accuracy score. And AdaGrad (including AdaDelta) does not do well with Neural Net, which is known.
+</p>
 
  ```cs231n/classifiers/fc_net.py``` is fully-connect Neural Net and has two classes:
 - `class TwoLayerNet(object)`  A two-layer fully-connected neural network with ReLU nonlinearity and
@@ -248,6 +240,7 @@ Among all these methods for parameter updating, `Adam` seems to be the best one 
 
 
 ## Section 1 -- Basics of Logistic Regression, Softmax Regression, SVM and Simple Neural Network
+
 > Dataset: Synthetic dataset, MNIST dataset  
 > File: LossGradientClassifiers.ipynb
 
@@ -387,35 +380,31 @@ $$
 
 The synthetic dataset have been described in the previous section. For the linear classifiers, whether for synthetic data with binary classes or multiple classes, as long as different cluster can be linearly separated, the linear classifiers can be trained on these data to correctly predict their labels.  
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_4_1.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 12. - Logistic regression and Binary SVM classifier can successfully predict the labels.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_4_1.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 12. - Logistic regression and Binary SVM classifier can successfully predict the labels.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_11_1.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 13. - Softmax regression and multi-class SVM classifier can successfully predict the labels.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_11_1.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 13. - Softmax regression and multi-class SVM classifier can successfully predict the labels.
+</p>
 
 However, when the synthetic data is not linearly separable, linear classifiers can not correctly predict their labels. This is the moment Neural Network starts to show its power. Even simple Neural Net with one hidden layer can predict the labels with high accuracy (97%). And I have tested different activation functions, including ReLu, Sigmoid, Tanh functions. Among them, ReLu has the best convergence speed and stability. For details, check `LossGradientClassifiers.ipynb`. 
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_18_1.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 14. - Linear classifiers failed to predict the labels. Accuracy is ~50%.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_18_1.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 14. - Linear classifiers failed to predict the labels. Accuracy is ~50%.
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/loss/output_24_1.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 15. - One-layer Neural Net model with ReLu activation function predict the synthetic datset with 97% accuracy.
-</figure>
-</center>
+<p align="center">
+<img src="figures/loss/output_24_1.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 15. - One-layer Neural Net model with ReLu activation function predict the synthetic datset with 97% accuracy.
+</p>
 
   
 
@@ -438,6 +427,7 @@ test set accuracy: 93%
 Later we will use CIFAR-10 data to train our Neural Net models. CIFAR-10 data is much more complicated than the MNIST data. As you will see, simple Neural Net model will not do well with CIFAR-10 data. And even multi-layers fully-connected Neural Net model can not predict the labels on the validation set with high accuracy. For CIFAR-10, we need to use more complicated Convolutional Neural Net models.
 
 ## Section 2. Fully connected neural network
+
 > Dataset: CIFAR-10 dataset  
 > File: FullyConnectedNets.ipynb
 
@@ -445,19 +435,17 @@ This Section build more complex fully-connected Neural Network and train it with
 
 With the entire 49,000 training dataset, one-layer fully-connected Neural Net with 200 neurons in the hidden layer gives 52% accuracy on the validation set. Five-layer fully-connected Neural Net with 100 neurons in each hidden layer gives 54.3% accuracy on both the validation set and testing set. These accuracy scores are far from satisfying. We will develop more complex Convolutional Neural Network models in the next section and achieve much better accuracy score.
 
-<center>
-<figure>
-  <p><img src="figures/FullyConnectedNets/output_22_0.png"  width="500" alt="The Pulpit Rock">
-  <p>Figure 16. - One-layer Neural Net model with 200 neurons in the hidden layer. Parameters for this run is num_epochs=10, batch_size=100, iterations=4900. Training accuracy is 62.5%, validation accuracy is 52%. 
-</figure>
-</center>
+<p align="center">
+<img src="figures/FullyConnectedNets/output_22_0.png"  width="500" alt="The Pulpit Rock">
+<br>
+Figure 16. - One-layer Neural Net model with 200 neurons in the hidden layer. Parameters for this run is num_epochs=10, batch_size=100, iterations=4900. Training accuracy is 62.5%, validation accuracy is 52%. 
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/FullyConnectedNets/output_50_1.png"  width="500" alt="The Pulpit Rock">
-  <p>Figure 17. - Five-layer fully-connected Neural Net with 100 neurons in each hidden layer. Parameters for this run is num_epochs=8, batch_size=100, iterations=3920. Training accuracy is 66.2%, validation accuracy is 54.3%, testing accuracy is 54.3%. 
-</figure>
-</center>
+<p align="center">
+<img src="figures/FullyConnectedNets/output_50_1.png"  width="500" alt="The Pulpit Rock">
+<br>
+Figure 17. - Five-layer fully-connected Neural Net with 100 neurons in each hidden layer. Parameters for this run is num_epochs=8, batch_size=100, iterations=3920. Training accuracy is 66.2%, validation accuracy is 54.3%, testing accuracy is 54.3%. 
+</p>
 
 
 ----------
@@ -465,46 +453,45 @@ With the entire 49,000 training dataset, one-layer fully-connected Neural Net wi
 This section also applies the Dropout and Batch normalization. Dropout help overcome overfitting problem and will give better accuracy score on the validation and testing set. Batch normalization normalize the output of each Neural layer and reduces the sensitivity to the initialization of the weight, which is another hyper-parameter to turn without batch normalization. Dropout and Batch normalization will be explained in the following two sub-sections.
 
 ### Section 2.1. Dropout
+
 > Dataset: CIFAR-10 dataset
 > File: Dropout.ipynb
 
 Dropout seems to be a "Mysterious" technique. In practice, dropout avoid overfitting and relying too much on some nodes by randomly ignoring them. [CS231n dropout section](http://cs231n.github.io/neural-networks-2/) shows how to do the dropout in practice.
 
-<center>
-<figure>
-  <p><img src="figures/dropout.jpeg"  width="400" alt="The Pulpit Rock">
-  <p>Figure 18. - During training, Dropout can be interpreted as sampling a Neural Network within the full Neural Network, and only updating the parameters of the sampled network based on the input data. 
-</figure>
-</center>
+<p align="center">
+<img src="figures/dropout.jpeg"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 18. - During training, Dropout can be interpreted as sampling a Neural Network within the full Neural Network, and only updating the parameters of the sampled network based on the input data. 
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/Dropout/output_11_0.png"  width="500" alt="The Pulpit Rock">
-  <p>Figure 19. - 0 dropout means no dropout is applied. 0.5 and 0.75 dropout mean 50% and 25% of the input data is randomly discarded in each iteration of training. This figure clearly shows that dropout give better validation score although the training score is not as good as without dropout. However, validation and testing score is the most important metrics for the model.
-</figure>
-</center>
+<p align="center">
+<img src="figures/Dropout/output_11_0.png"  width="500" alt="The Pulpit Rock">
+<br>
+Figure 19. - 0 dropout means no dropout is applied. 0.5 and 0.75 dropout mean 50% and 25% of the input data is randomly discarded in each iteration of training. This figure clearly shows that dropout give better validation score although the training score is not as good as without dropout. However, validation and testing score is the most important metrics for the model.
+</p>
 
 ### Section 2.2 Batch normalization and spatial batch normalization 
+
 > Dataset: CIFAR-10 dataset
 > File: BatchNormalization.ipynb
 
 Batch normalization normalize the input before the activation function to be zero mean and unit variance. In practice, using batch normalization will make the neural network less sensitive to value of weight scale used in weight initialization. [Clément thorey's blog](http://cthorey.github.io./backpropagation/) gives nice explanation of batch normalization. Actually, once you know the equation of batch normalization, it should be quite easy to derive the form of backpropagation (just use the chain rule).
 
-<center>
-<figure>
-  <p><img src="figures/BatchNormalization/output_15_0.png"  width="500" alt="The Pulpit Rock">
-  <p>Figure 20. - In the baseline model, the weight scale for the weight initialization is 0.02. It is clear that with batch normalization, both the training accuracy and the validation accuracy are improved. 
-</figure>
-</center>
+<p align="center">
+<img src="figures/BatchNormalization/output_15_0.png"  width="500" alt="The Pulpit Rock">
+<br>
+Figure 20. - In the baseline model, the weight scale for the weight initialization is 0.02. It is clear that with batch normalization, both the training accuracy and the validation accuracy are improved. 
+</p>
 
-<center>
-<figure>
-  <p><img src="figures/BatchNormalization/output_18_0.png"  width="500" alt="The Pulpit Rock">
-  <p>Figure 21. - Without batch normalization, only the weight initialization scale around $10^{-1}$ gives the best score, while other weight initialization scale values give much worse accuracy score. However, with the batch normalization, the difference between different weight initialization scale is not so dramatic.
-</figure>
-</center>
+<p align="center">
+<img src="figures/BatchNormalization/output_18_0.png"  width="500" alt="The Pulpit Rock">
+<br>
+Figure 21. - Without batch normalization, only the weight initialization scale around $10^{-1}$ gives the best score, while other weight initialization scale values give much worse accuracy score. However, with the batch normalization, the difference between different weight initialization scale is not so dramatic.
+</p>
 
 ## Section 3 Convolutional neural network
+
 > Dataset: CIFAR-10 dataset
 > File: ConvolutionalNetworks.ipynb
 
@@ -514,12 +501,11 @@ Eventually, we come to the powerful Convolutional Neural Network! The first simp
 
 This is the most basic Conv Net model. After 980 iterations with batchsize=50, the training accuracy is 50.8% and validation accuracy is 52.2%. This score makes Conv Net models promising in achieving better accuracy scores after building a more complicated Conv Net model. In the Conv layer, 32 filters was used. In this figure below, each filter represents some edge features or color patterns. 
 
-<center>
-<figure>
-  <p><img src="figures/ConvolutionalNetworks/output_31_0.png"  width="400" alt="The Pulpit Rock">
-  <p>Figure 22. - Weights of 32 filters in the Conv Net model trained on CIFAR-10 dataset.
-</figure>
-</center>
+<p align="center">
+<img src="figures/ConvolutionalNetworks/output_31_0.png"  width="400" alt="The Pulpit Rock">
+<br>
+Figure 22. - Weights of 32 filters in the Conv Net model trained on CIFAR-10 dataset.
+</p>
 
 Eventually, I build a flexible CNN (`class MineConvNet` in cs231n/classifiers/complex_cnn.py), allowing user to expand the number of the Convolutional layers and number of the fully-connected layers. MineConvNet also included the functionality of dropout for the fully-connected layers, batch normalization and spatial batch normalization for the full-connected and convolutional layers respectively.
 
@@ -537,6 +523,7 @@ The 80% accuracy score was achieved without extensive testing on hyper-parameter
 
 
 ### Section 3.1 CNN forward propagation and backpropagation
+
 > File: CNN_Note_Convolution.ipynb
 
 After I understand the structure of normal Neural Network with just fully-connected layers, I was puzzled by Convolutional Neural Network. Why is it called "Convolutional", because convolution is a technique in signal or image processing. And how is the structure different from full-connect Neural Net and how to do forward and backward propagation with Convolutional Neural Network. Below is my notes on the math and tricks for Convolutional Neural Network foward and backward propagation. I have coded my understanding and it passed the unit test. For details, check `CNN_Note_Convolution.ipynb`.
@@ -615,6 +602,7 @@ It is clear to see that $\frac{\partial L}{\partial F_{ij}} = \bar f'(Y) \ast X 
 >Note that when $S>1$, it is no longer standard cross-correlation of convolution. But I guess it might be a convention to call this method Convolutional Neural Network. 
 
 ##### A better way to calculate gradient
+
 In calculating $\frac{\partial L}{\partial X_{mn}}$, altough the equation is clear, the index of $F$ will go out of bound. For the out of bound index of $F$, we need to set them to be zeros. This can be done by some ```if else``` check, or just pad lots of zeros to $F$ to form a new filter. And it will not be easy to figure out correctly with padding $P>0$ and strike $S>1$.
 
 A trick to calculate $\frac{\partial L}{\partial X_{mn}}$ is that, instead of fixing the index of $X$, then figuring out the index of $f'(Y)$ , we fix the index of $f'(Y)$, then figure out the index of $X$. 
