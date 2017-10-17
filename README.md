@@ -52,13 +52,11 @@ Figure 1. - Seven random sample images of each class.
 
     Figure 2. shows some samples of the MNIST dataset. As you see, some digits can be easily recognized. But some are quite scratchy and even difficult for human to recognize.
 
-<center>
 <p align="center">
 <img src="figures/mnist_examples.png"  width="400" alt="The Pulpit Rock">
-<p>
 <br>
 Figure 2. - Eighty samples of the MNIST dataset, handwriting digits.
-</center>
+<p>
 
 - Synthetic data, with two features (x and y coordinate), are either in two clusters or three clusters with  unique labels for each cluster. These clusters are separated from each other but some of them are linearly separable and some are not. 
 
@@ -86,7 +84,6 @@ I did not include the MNIST and CIFAR-10 dataset since they are too large. But i
 
 
 ## Code and Algorithm description
-
 > If you use Anaconda python, the codes should run smoothly. Just pay attention that except for `LossGradientClassifiers.ipynb` and `CNN_Note_Convolution.ipynb`, which run on `Python 3`, all the other codes and notebooks run on `Python 2`.
 > 
 > For Convolutional Neural Networks to run fast. We have implemented of the functionality using [Cython](http://cython.org/); you will need to compile the Cython extension before you can run the code. From the `cs231n` directory, run the following command:
