@@ -48,15 +48,20 @@ The datasets used in this project are:
 Figure 1. - Seven random sample images of each class. 
 </p>
 
-- The [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/), has 70,000 32x32 gray-scale images in 10 classes (digit 0 to 9). This dataset is split into 60,000 training examples, 10,000 testing examples. In total, there are 1024 features. Since I did not focus on improving the prediction on MNIST dataset, and the images are in grayscale with similar range of values, this image was not preprocessed. There is also no validation set for this dataset because I did not spend much efforts tuning the hyper-parameters and Neural net structure for this dataset. MNIST is used to test the simple one-layer and two-layer Neural Net I built, which to my surprise, gives very high accuracy on the testing set (over 92%).
+## hello2
 
-    Figure 2. shows some samples of the MNIST dataset. As you see, some digits can be easily recognized. But some are quite scratchy and even difficult for human to recognize.
+* The [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/), 
+  has 70,000 32x32 gray-scale images in 10 classes (digit 0 to 9). This dataset is split into 60,000 training examples, 10,000 testing examples. In total, there are 1024 features. Since I did not focus on improving the prediction on MNIST dataset, and the images are in grayscale with similar range of values, this image was not preprocessed. There is also no validation set for this dataset because I did not spend much efforts tuning the hyper-parameters and Neural net structure for this dataset. MNIST is used to test the simple one-layer and two-layer Neural Net I built, which to my surprise, gives very high accuracy on the testing set (over 92%).
+
+  * Figure 2. shows some samples of the MNIST dataset. As you see, some digits can be easily recognized. But some are quite scratchy and even difficult for human to recognize.
 
 <p align="center">
-<img src="figures/mnist_examples.png"  width="400" alt="The Pulpit Rock">
+<img src="figures/mnist_examples.png"  width="400">
 <br>
 Figure 2. - Eighty samples of the MNIST dataset, handwriting digits.
-<p>
+</p>
+
+## hello
 
 - Synthetic data, with two features (x and y coordinate), are either in two clusters or three clusters with  unique labels for each cluster. These clusters are separated from each other but some of them are linearly separable and some are not. 
 
